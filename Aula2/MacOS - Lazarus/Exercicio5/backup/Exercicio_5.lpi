@@ -5,10 +5,11 @@
     <General>
       <Flags>
         <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
         <MainUnitHasScaledStatement Value="False"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="Exercicio_4"/>
+      <Title Value="My Application"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -24,7 +25,7 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="Exercicio_4.lpr"/>
+        <Filename Value="Exercicio_5.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>
@@ -32,17 +33,17 @@
   <CompilerOptions>
     <Version Value="11"/>
     <Target>
-      <Filename Value="Exercicio_4"/>
+      <Filename Value="Exercicio_5"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Linking>
-      <Debugging>
-        <DebugInfoType Value="dsDwarf3"/>
-      </Debugging>
-    </Linking>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
   </CompilerOptions>
   <Debugging>
     <Exceptions>

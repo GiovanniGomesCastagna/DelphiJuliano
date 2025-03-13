@@ -39,5 +39,5 @@ begin
       classificacao:= 'Adulto';
     end;
   end;
-  writeln(Format('Jogador ira jogar na classificacao %s.', [classificacao]));
+  writeln(Format('Jogador ira jogar na classificacao %s .', [classificacao]));
 end.

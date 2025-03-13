@@ -13,12 +13,7 @@
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory>
-      <Position>
-        <Filename Value="Exercicio_2.lpr"/>
-        <Caret Line="17" Column="9"/>
-      </Position>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

@@ -8,11 +8,14 @@
         <Filename Value="Exercicio_2.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="9" Y="17"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="30" Y="9"/>
         <UsageCount Value="20"/>
-        <Loaded Value="True"/>
       </Unit>
     </Units>
+    <General>
+      <ActiveWindowIndexAtStart Value="-1"/>
+    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>

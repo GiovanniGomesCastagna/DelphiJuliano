@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Exercicio_5.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="33" Y="33"/>
+        <UsageCount Value="56"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="6">
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="33" Column="75"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="13" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="33" Column="76"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="13" Column="20"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="14" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="23" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_5.lpr"/>
+        <Caret Line="27" Column="150"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

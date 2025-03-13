@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="Exercicio_7.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="4"/>
+        <CursorPos X="21" Y="34"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="10">
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="50" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="15" Column="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="27" Column="36"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="13" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="27" Column="45"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="16" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="13" Column="18"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="23" Column="155" TopLine="2"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="16" Column="17"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_7.lpr"/>
+        <Caret Line="17" Column="17"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

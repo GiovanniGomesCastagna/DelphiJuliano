@@ -5,18 +5,20 @@
     <BuildModes Active="Default"/>
     <Units>
       <Unit>
-        <Filename Value="Exercicio_5.lpr"/>
+        <Filename Value="Exercicio_6.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="138" Y="23"/>
-        <UsageCount Value="57"/>
+        <CursorPos X="68" Y="26"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory>
+      <Position>
+        <Filename Value="Exercicio_6.lpr"/>
+        <Caret Line="26" Column="72"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>

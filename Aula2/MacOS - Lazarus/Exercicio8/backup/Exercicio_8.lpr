@@ -24,15 +24,15 @@ begin
     readln(vetor[i]);
   end;
 
-  for i := 0 to (tamanhoVetor - 1) do
+  for i := 0 to tamanhoVetor do
   begin
-    for j := 0 to (tamanhoVetor - 2) do
+    for j := 0 to tamanhoVetor - 1 do
     begin
-      if (vetor[i] > vetor[i + 1]) then
+      if (vetor[j] > vetor[j + 1]) then
       begin
-        tempor:= vetor[i];
-        vetor[i]:= vetor[i + 1];
-        vetor[i + 1]:= tempor;
+        tempor:= vetor[j];
+        vetor[j]:= vetor[j + 1];
+        vetor[j + 1]:= tempor;
       end;
     end;
   end;

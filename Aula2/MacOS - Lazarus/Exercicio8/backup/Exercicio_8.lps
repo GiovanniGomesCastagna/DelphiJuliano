@@ -9,12 +9,12 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="12"/>
-        <CursorPos X="33" Y="22"/>
+        <CursorPos X="33" Y="27"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="Exercicio_8.lpr"/>
         <Caret Line="21" Column="52"/>
@@ -22,6 +22,10 @@
       <Position>
         <Filename Value="Exercicio_8.lpr"/>
         <Caret Line="22" Column="16"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_8.lpr"/>
+        <Caret Line="47" Column="26" TopLine="23"/>
       </Position>
     </JumpHistory>
     <RunParams>

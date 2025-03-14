@@ -44,5 +44,4 @@ begin
   end;
 
   writeln(Format('Finalizado! Seu pedido sera de R$ %.2f. Tenha um bom dia!', [somaProdutos]));
-  Readln;
 end.

@@ -8,12 +8,13 @@
         <Filename Value="Exercicio_9.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="7" Y="24"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="30"/>
+        <CursorPos X="76" Y="61"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
+    <JumpHistory HistoryIndex="22">
       <Position>
         <Filename Value="Exercicio_9.lpr"/>
         <Caret Line="21" Column="10"/>
@@ -41,6 +42,70 @@
       <Position>
         <Filename Value="Exercicio_9.lpr"/>
         <Caret Line="26" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="24" Column="7"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="27" Column="3"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="25" Column="19"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="41" Column="25" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="19" Column="13" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="29" Column="12" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="50" Column="15" TopLine="25"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="54" Column="41" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="55" Column="3" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="54" Column="18" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="51" Column="19" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="53" Column="7" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="54" Column="3" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="53" Column="6" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="63" Column="4" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_9.lpr"/>
+        <Caret Line="56" Column="13" TopLine="31"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -26,11 +26,11 @@ begin
 
   for i := 0 to numeroProdutos - 1 do
   begin
-    writeln(Format('Insira o valor de custo do produto numero %d:', [i + 1]));
+    writeln(Format('Insira o valor de custo do produto numero %d:', [i]));
     readln(producao[i]);
     totalProducao:= (totalProducao + producao[i]);
 
-    writeln(Format('Insira o valor de venda do produto numero %d:', [i + 1]));
+    writeln(Format('Insira o valor de venda do produto numero %d:', [i]));
     readln(venda[i]);
     totalVenda:= (totalVenda + venda[i]);
    end;
@@ -47,5 +47,5 @@ begin
     writeln(Format('A emrpesa obteve lucro com as vendas, finalizando com um saldo de R$ %.2f.', [lucro]));
   end;
 
-  readln;
+
 end.

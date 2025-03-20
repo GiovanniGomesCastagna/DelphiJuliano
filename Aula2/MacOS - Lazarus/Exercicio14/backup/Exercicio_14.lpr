@@ -79,16 +79,19 @@ begin
 procedure listarProdutos;
 var
   itens: TProduto;
-  codigo: integer;
+  chave: integer;
 begin
   if (EstoqueProd.Count = 0) then
   begin
     writeln('Nenhum produto foi cadastrado.');
     exit;
+  end
+  else
+  begin
+    for chave in EstoqueProd.Keys do
+    itens:= EstoqueProd.Items[chave];
+    writeln(Format('Codigo: %d -|- Descricao: %s -|- Valor: R$ %.2f ', [chave, itens.Descricao, itens.Valor]));
   end;
-    itens:= EstoqueProd.Items[codigo]: integer;
-    for codigo in EstoqueProd.Keys do
-    writeln(Format('Codigo: %d -|- Descricao: %s -|- Valor: R$ %.2f ', [itens.Codigo, itens.Descricao, itens.Valor]));
 
 end;
 

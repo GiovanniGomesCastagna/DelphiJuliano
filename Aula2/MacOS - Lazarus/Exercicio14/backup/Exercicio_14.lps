@@ -8,9 +8,9 @@
         <Filename Value="Exercicio_14.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="78"/>
-        <CursorPos X="47" Y="89"/>
-        <UsageCount Value="66"/>
+        <TopLine Value="75"/>
+        <CursorPos X="87" Y="91"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -24,22 +24,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="43" Column="12" TopLine="29"/>
-      </Position>
-      <Position>
-        <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="76" Column="6" TopLine="62"/>
-      </Position>
-      <Position>
-        <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="81" TopLine="64"/>
-      </Position>
-      <Position>
-        <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="101" Column="8" TopLine="77"/>
-      </Position>
       <Position>
         <Filename Value="Exercicio_14.lpr"/>
         <Caret Line="82" TopLine="72"/>
@@ -142,7 +126,23 @@
       </Position>
       <Position>
         <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="89" Column="28" TopLine="72"/>
+        <Caret Line="89" Column="29" TopLine="72"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_14.lpr"/>
+        <Caret Line="90" Column="24" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_14.lpr"/>
+        <Caret Line="91" Column="14" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_14.lpr"/>
+        <Caret Line="82" Column="18" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_14.lpr"/>
+        <Caret Line="92" Column="36" TopLine="75"/>
       </Position>
     </JumpHistory>
     <RunParams>

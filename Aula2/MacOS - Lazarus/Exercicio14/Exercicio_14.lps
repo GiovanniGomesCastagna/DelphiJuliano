@@ -9,29 +9,21 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="75"/>
-        <CursorPos X="112" Y="94"/>
-        <UsageCount Value="67"/>
+        <CursorPos X="168" Y="88"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../../../../../../Downloads/lazarus/fpc/3.2.2/sources/packages/rtl-generics/src/generics.collections.pas"/>
         <UnitName Value="Generics.Collections"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="6"/>
-        <CursorPos X="59" Y="150"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="127"/>
+        <CursorPos X="71" Y="144"/>
+        <UsageCount Value="11"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="82" TopLine="72"/>
-      </Position>
-      <Position>
-        <Filename Value="Exercicio_14.lpr"/>
-        <Caret Line="107" Column="44" TopLine="79"/>
-      </Position>
       <Position>
         <Filename Value="Exercicio_14.lpr"/>
         <Caret Line="115" Column="6" TopLine="83"/>
@@ -143,6 +135,14 @@
       <Position>
         <Filename Value="Exercicio_14.lpr"/>
         <Caret Line="92" Column="36" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="Exercicio_14.lpr"/>
+        <Caret Line="98" Column="16" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="../../../../../../../Downloads/lazarus/fpc/3.2.2/sources/packages/rtl-generics/src/generics.collections.pas"/>
+        <Caret Line="144" Column="52" TopLine="127"/>
       </Position>
     </JumpHistory>
     <RunParams>

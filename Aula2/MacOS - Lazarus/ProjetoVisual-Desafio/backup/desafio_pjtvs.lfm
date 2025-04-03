@@ -106,7 +106,7 @@ object Form1: TForm1
       Width = 187
       Caption = 'Cadastrar'
       Color = 9025255
-      TabOrder = 5
+      TabOrder = 7
       OnClick = BTNcadastroClick
     end
     object RDGRPtipoUsuario: TRadioGroup
@@ -132,25 +132,37 @@ object Form1: TForm1
       ParentBackground = False
       TabOrder = 6
     end
+    object EDTsenhaConfirma: TEdit
+      Left = 184
+      Height = 21
+      Top = 312
+      Width = 144
+      EchoMode = emPassword
+      PasswordChar = '*'
+      TabOrder = 5
+      TextHint = 'Confirmação da Senha'
+    end
   end
   object STRGRIDusuariosCadastrados: TStringGrid
     Left = 608
     Height = 548
     Top = 72
     Width = 464
+    AutoEdit = False
+    AutoFillColumns = True
     ColCount = 6
     ColSizingCursor = crIBeam
+    FixedCols = 0
     Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goSmoothScroll]
+    RowCount = 50
     TabOrder = 1
-  end
-  object EDTsenhaConfirma: TEdit
-    Left = 240
-    Height = 21
-    Top = 384
-    Width = 144
-    EchoMode = emPassword
-    PasswordChar = '*'
-    TabOrder = 2
-    TextHint = 'Confirmação da Senha'
+    ColWidths = (
+      77
+      77
+      77
+      77
+      77
+      77
+    )
   end
 end

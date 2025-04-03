@@ -55,18 +55,21 @@ procedure TForm1.FormClick(Sender: TObject);
 begin
 
 end;
-
+//--------------------------------------------------==============================================-------------------------------
 // verificação de campos do cadastro e confirma caso estejam corretos
 procedure TForm1.BTNcadastroClick(Sender: TObject);
 var
   EmailRegex, TelefoneRegex: TRegExpr;
   telefoneTexto: string;
+  opcaoTipoUsuario: Integer;
+  escolhaTipoUsuario: string;
+  idade: integer;
+  i: integer;
 begin
   //Verifica se nome do usuário está preenchido;
   if Trim(EDTnomeUsuario.text).isEmpty then
   begin
     MessageDlg('Nome é obrigatório.', mtWarning, [mbOk], 0);
-    exit;
   end;
 
   // verifica se o campo e-mail está vazio
@@ -98,25 +101,67 @@ begin
     Exit;
   end;
 
-  // verifica se o telefone inserido é válido. Se sim, verifica se tem 10 números e adiciona o 9 na frente.
-  telefoneTexto:= MASKEDTtelefone.text;
-  TelefoneRegex:= TRegExpr.Create('^\(?\d{2}\)?[-.\s]?\d{4,5}[-.\s]?\d{4}$');
-  if TelefoneRegex.Exec(MASKEDTtelefone.text) then
+
+  // verificação dos campos de senha
+  if Trim(EDTsenha.text).isEmpty then
   begin
-    if length(MASKEDTtelefone.text) = 10 then
+    MessageDlg('Campo de senha deve ser preenchido obrigatoriamente.', mtWarning, [mbOk], 0);
+    Exit;
+  end;
+
+  if Trim(EDTsenhaConfirma.text).isEmpty then
+  begin
+    MessageDlg('Campo de confirmação de senha deve ser preenchido obrigatoriamente.', mtWarning, [mbOk], 0);
+    Exit;
+  end;
+
+  if not (EDTsenha.text = EDTsenhaConfirma.text) then
+  begin
+    MessageDlg('Senhas não conferem! Tente novamente.', mtWarning, [mbOk], 0);
+    Exit;
+  end;
+
+  //verifica se o campo do tipo de usuário está preenchido
+  opcaoTipoUsuario:= RDGRPtipoUsuario.ItemIndex;
+
+  if opcaoTipoUsuario = -1 then
+  begin
+    MessageDlg('Tipo de usuário deve ser selecionado!', mtWarning, [mbOk], 0);
+  end;
+
+  escolhaTipoUsuario:= RDGRPtipoUsuario.Items[opcaoTipoUsuario];
+
+
+  // procura pela primeira linha vazia
+  for i := 1 to STRGRIDusuariosCadastrados.RowCount - 1 do
+  begin
+    if STRGRIDusuariosCadastrados.Cells[0, i] = '' then
     begin
-      telefoneTexto:= Copy(telefoneTexto, 1, 2) + '9' + Copy(telefoneTexto, 3, Length(telefoneTexto));
-      ShowMessage(Format('Telefone alterado: %s', [telefoneTexto]));
-    end
-    else
-    begin
-      MessageDlg('Número inválido! Tente novamente.', mtWarning, [mbOk], 0);
+      FLinha := i;
+      Break;
     end;
   end;
 
+  STRGRIDusuariosCadastrados.Cells[0,FLinha] := FCodigo.ToString;
+  STRGRIDusuariosCadastrados.Cells[1,FLinha] := EDTnomeUsuario.Text;
+  STRGRIDusuariosCadastrados.Cells[2,FLinha] := EDTemail.Text;
+  STRGRIDusuariosCadastrados.Cells[3,Flinha] := DateToStr(DATEPICKaniversario.Date);
+  STRGRIDusuariosCadastrados.Cells[4,FLinha] := MASKEDTtelefone.Text;
+  STRGRIDusuariosCadastrados.Cells[5,FLinha] := escolhaTipoUsuario;
 
   Inc(FCodigo);
   ShowMessage('Usuário Cadastrado!');
+
+  EDTnomeUsuario.Clear;
+  EDTemail.Clear;
+  EDTemail.Clear;
+  DATEPICKaniversario.Date:= Date;
+  MASKEDTtelefone.Clear;
+  EDTsenha.Clear;
+  EDTsenhaConfirma.Clear;
+  escolhaTipoUsuario:= '';
+  opcaoTipoUsuario:= -1;
+
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);

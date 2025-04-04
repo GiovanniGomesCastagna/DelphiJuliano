@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, datetimectrls, Desafio_PjtVS
+  Forms, datetimectrls, Desafio_PjtVS, unit1
   { you can add units after this };
 
 {$R *.res}

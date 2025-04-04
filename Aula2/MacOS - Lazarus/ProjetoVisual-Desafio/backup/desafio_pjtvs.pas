@@ -115,9 +115,10 @@ begin
     Exit;
   end;
 
-  if not (EDTsenha = EDTsenhaConfirma) then
+  if not (EDTsenha.text = EDTsenhaConfirma.text) then
   begin
     MessageDlg('Senhas não conferem! Tente novamente.', mtWarning, [mbOk], 0);
+    Exit;
   end;
 
   //verifica se o campo do tipo de usuário está preenchido

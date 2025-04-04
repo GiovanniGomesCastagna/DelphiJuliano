@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 271
+  Left = 266
   Height = 723
   Top = 117
-  Width = 1129
+  Width = 1134
   Caption = 'Desafio - Projeto Visual'
   ClientHeight = 723
-  ClientWidth = 1129
+  ClientWidth = 1134
   Color = 14347001
   OnClick = FormClick
   OnCreate = FormCreate

@@ -1,0 +1,73 @@
+object formTrivia: TformTrivia
+  Left = 381
+  Height = 624
+  Top = 143
+  Width = 920
+  Caption = 'Trivia'
+  ClientHeight = 624
+  ClientWidth = 920
+  LCLVersion = '3.8.0.0'
+  object panelPesquisa: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 0
+    Height = 106
+    Top = 0
+    Width = 920
+    Anchors = [akTop, akLeft, akRight]
+    ClientHeight = 106
+    ClientWidth = 920
+    TabOrder = 0
+    object edtPesquisa: TEdit
+      AnchorSideLeft.Control = panelPesquisa
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = panelPesquisa
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = panelPesquisa
+      AnchorSideRight.Side = asrCenter
+      AnchorSideBottom.Side = asrCenter
+      Left = 258
+      Height = 23
+      Top = 42
+      Width = 405
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Helvetica Neue'
+      ParentFont = False
+      TabOrder = 0
+      TextHint = 'Insira o nome de um País para pesquisá-lo na lista'
+    end
+    object Contador: TLabel
+      AnchorSideLeft.Control = panelPesquisa
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = edtPesquisa
+      AnchorSideTop.Side = asrBottom
+      AnchorSideRight.Control = panelPesquisa
+      AnchorSideRight.Side = asrCenter
+      Left = 386
+      Height = 16
+      Top = 65
+      Width = 148
+      Alignment = taCenter
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Países acertados: '
+    end
+  end
+  object panelGlobal: TPanel
+    AnchorSideLeft.Control = panelPesquisa
+    AnchorSideTop.Control = panelPesquisa
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 518
+    Top = 106
+    Width = 920
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    TabOrder = 1
+  end
+end

@@ -8,10 +8,9 @@
       <Unit>
         <Filename Value="projectTDE.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
-        <CursorPos Y="19"/>
-        <UsageCount Value="43"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="25"/>
+        <UsageCount Value="45"/>
       </Unit>
       <Unit>
         <Filename Value="unittde.pas"/>
@@ -21,9 +20,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitTDE"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="129"/>
-        <CursorPos Y="166"/>
-        <UsageCount Value="43"/>
+        <TopLine Value="295"/>
+        <CursorPos X="5" Y="36"/>
+        <UsageCount Value="45"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -33,32 +32,15 @@
         <UsageCount Value="8"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\promptdialog.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="800"/>
+        <CursorPos X="18" Y="819"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="unittde.pas"/>
-        <Caret Line="918" Column="18" TopLine="892"/>
-      </Position>
-      <Position>
-        <Filename Value="unittde.pas"/>
-        <Caret Line="923" Column="52" TopLine="894"/>
-      </Position>
-      <Position>
-        <Filename Value="unittde.pas"/>
-        <Caret Line="958" Column="15" TopLine="856"/>
-      </Position>
-      <Position>
-        <Filename Value="unittde.pas"/>
-        <Caret Line="524" Column="52" TopLine="504"/>
-      </Position>
-      <Position>
-        <Filename Value="unittde.pas"/>
-        <Caret Line="326" Column="19" TopLine="305"/>
-      </Position>
-      <Position>
-        <Filename Value="unittde.pas"/>
-        <Caret Line="283" Column="7" TopLine="265"/>
-      </Position>
       <Position>
         <Filename Value="unittde.pas"/>
         <Caret Line="336" Column="7" TopLine="318"/>
@@ -94,10 +76,6 @@
       <Position>
         <Filename Value="unittde.pas"/>
         <Caret Line="1207" TopLine="1171"/>
-      </Position>
-      <Position>
-        <Filename Value="projectTDE.lpr"/>
-        <Caret Line="18"/>
       </Position>
       <Position>
         <Filename Value="unittde.pas"/>
@@ -155,6 +133,34 @@
         <Filename Value="unittde.pas"/>
         <Caret Line="97" Column="14" TopLine="79"/>
       </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="275" Column="2" TopLine="251"/>
+      </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="291" Column="29" TopLine="245"/>
+      </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="674" Column="7" TopLine="649"/>
+      </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="681" Column="66" TopLine="648"/>
+      </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="676" Column="10" TopLine="657"/>
+      </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="672" Column="100" TopLine="652"/>
+      </Position>
+      <Position>
+        <Filename Value="unittde.pas"/>
+        <Caret Line="729" Column="10" TopLine="713"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -163,11 +169,9 @@
       </Modes>
     </RunParams>
     <HistoryLists>
-      <List Name="WorkingDirectory" Type="File" Count="1"/>
       <List Name="LaunchingApplication" Type="File" Count="1">
         <Item1 Value="C:\WINDOWS\system32\cmd.exe /C ${TargetCmdLine}"/>
       </List>
-      <List Name="CommandLineParameters" Count="1"/>
     </HistoryLists>
   </ProjectSession>
 </CONFIG>

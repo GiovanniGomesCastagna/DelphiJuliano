@@ -257,7 +257,22 @@ begin
   and (Condicional15) and (Condicional16)
   and (Condicional17) and (Condicional18)
   and (Condicional19) and (Condicional20)
-  and (Condicional21) and (Condicional22) then
+  and (Condicional21) and (Condicional22)
+  and (Posicao[1].Capacete <> '') and (Posicao[2].Capacete <> '')
+  and (Posicao[3].Capacete <> '') and (Posicao[4].Capacete <> '')
+  and (Posicao[5].Capacete <> '') and (Posicao[1].Nome <> '')
+  and (Posicao[2].Nome <> '') and (Posicao[3].Nome <> '')
+  and (Posicao[4].Nome <> '') and (Posicao[5].Nome <> '')
+  and (Posicao[1].Idade <> '') and (Posicao[2].Idade <> '')
+  and (Posicao[3].Idade <> '') and (Posicao[4].Idade <> '')
+  and (Posicao[5].Idade <> '') and (Posicao[1].Idolo <> '')
+  and (Posicao[2].Idolo <> '') and (Posicao[3].Idolo <> '')
+  and (Posicao[4].Idolo <> '') and (Posicao[5].Idolo <> '')
+  and (Posicao[1].Carro <> '') and (Posicao[2].Carro <> '')
+  and (Posicao[3].Carro <> '') and (Posicao[4].Carro <> '')
+  and (Posicao[5].Carro <> '') and (Posicao[1].Equipe <> '')
+  and (Posicao[2].Equipe <> '') and (Posicao[3].Equipe <> '')
+  and (Posicao[4].Equipe <> '') and (Posicao[5].Equipe <> '') then
   begin
     Result:= True;
   end

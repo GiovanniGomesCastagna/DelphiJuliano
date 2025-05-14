@@ -653,28 +653,20 @@ end;
 function TKartForm.Condicional9: Boolean;
 var
   i, certo: integer;
-  posAlonso, posWilliams: integer;
 begin
   Result:= False;
   certo:= 999;
   for i := 1 to 4 do
   begin
-    posAlonso:= -1;
-    posWilliams:= -1;
-
-    if (Posicao[i].Idolo = 'F. Alonso') then
-    posAlonso:= i;
-    if (Posicao[i].Equipe = 'Williams') then
-    posWilliams:= i;
-
-    if (posAlonso <> -1) and (posWilliams <> -1) then
+    if (Posicao[i].Idolo <> '') and (Posicao[i + 1].Equipe <> '') then
     begin
-      if (posWilliams > posAlonso) and ((Posicao[i].Idolo = 'F. Alonso') and (Posicao[i + 1].Equipe = 'Williams')) then
+      if (Posicao[i].Idolo = 'F. Alonso') and (Posicao[i + 1].Equipe = 'Williams') then
       begin
         Result:= True;
         certo:= 1;
-      end;
-      if (posAlonso >= posWilliams) or (posWilliams - posAlonso > 1) then
+      end
+      else if (Posicao[i].Idolo = 'F. Alonso') and (Posicao[i + 1].Equipe <> 'Williams')
+      or (Posicao[i].Idolo <> 'F. Alonso') and (Posicao[i + 1].Equipe = 'Williams') then
       begin
         Result:= False;
         certo:= 0;

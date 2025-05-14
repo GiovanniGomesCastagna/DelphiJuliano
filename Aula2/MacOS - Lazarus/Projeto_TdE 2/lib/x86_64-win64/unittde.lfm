@@ -83,6 +83,7 @@ object KartForm: TKartForm
           'verde'
           'vermelho'
         )
+        Style = csDropDownList
         TabOrder = 0
         OnChange = ComboBoxGeralChange
       end
@@ -110,6 +111,7 @@ object KartForm: TKartForm
           'Fernando'
           'Rubens'
         )
+        Style = csDropDownList
         TabOrder = 1
         OnChange = ComboBoxGeralChange
       end
@@ -137,6 +139,7 @@ object KartForm: TKartForm
           '29'
           '31'
         )
+        Style = csDropDownList
         TabOrder = 2
         OnChange = ComboBoxGeralChange
       end
@@ -164,6 +167,7 @@ object KartForm: TKartForm
           'M. Schumacher'
           'N. Piquet'
         )
+        Style = csDropDownList
         TabOrder = 3
         OnChange = ComboBoxGeralChange
       end
@@ -191,6 +195,7 @@ object KartForm: TKartForm
           'sedan'
           'SUV'
         )
+        Style = csDropDownList
         TabOrder = 4
         OnChange = ComboBoxGeralChange
       end
@@ -217,6 +222,7 @@ object KartForm: TKartForm
           'Renault'
           'Williams'
         )
+        Style = csDropDownList
         TabOrder = 5
         OnChange = ComboBoxGeralChange
       end
@@ -293,6 +299,7 @@ object KartForm: TKartForm
           'Fernando'
           'Rubens'
         )
+        Style = csDropDownList
         TabOrder = 1
         OnChange = ComboBoxGeralChange
       end
@@ -320,6 +327,7 @@ object KartForm: TKartForm
           '29'
           '31'
         )
+        Style = csDropDownList
         TabOrder = 2
         OnChange = ComboBoxGeralChange
       end
@@ -347,6 +355,7 @@ object KartForm: TKartForm
           'M. Schumacher'
           'N. Piquet'
         )
+        Style = csDropDownList
         TabOrder = 3
         OnChange = ComboBoxGeralChange
       end
@@ -374,6 +383,7 @@ object KartForm: TKartForm
           'sedan'
           'SUV'
         )
+        Style = csDropDownList
         TabOrder = 4
         OnChange = ComboBoxGeralChange
       end
@@ -401,6 +411,7 @@ object KartForm: TKartForm
           'Renault'
           'Williams'
         )
+        Style = csDropDownList
         TabOrder = 5
         OnChange = ComboBoxGeralChange
       end
@@ -477,6 +488,7 @@ object KartForm: TKartForm
           'Fernando'
           'Rubens'
         )
+        Style = csDropDownList
         TabOrder = 1
         OnChange = ComboBoxGeralChange
       end
@@ -504,6 +516,7 @@ object KartForm: TKartForm
           '29'
           '31'
         )
+        Style = csDropDownList
         TabOrder = 2
         OnChange = ComboBoxGeralChange
       end
@@ -531,6 +544,7 @@ object KartForm: TKartForm
           'M. Schumacher'
           'N. Piquet'
         )
+        Style = csDropDownList
         TabOrder = 3
         OnChange = ComboBoxGeralChange
       end
@@ -558,6 +572,7 @@ object KartForm: TKartForm
           'sedan'
           'SUV'
         )
+        Style = csDropDownList
         TabOrder = 4
         OnChange = ComboBoxGeralChange
       end
@@ -585,6 +600,7 @@ object KartForm: TKartForm
           'Renault'
           'Williams'
         )
+        Style = csDropDownList
         TabOrder = 5
         OnChange = ComboBoxGeralChange
       end
@@ -634,6 +650,7 @@ object KartForm: TKartForm
           'verde'
           'vermelho'
         )
+        Style = csDropDownList
         TabOrder = 0
         OnChange = ComboBoxGeralChange
       end
@@ -661,6 +678,7 @@ object KartForm: TKartForm
           'Fernando'
           'Rubens'
         )
+        Style = csDropDownList
         TabOrder = 1
         OnChange = ComboBoxGeralChange
       end
@@ -688,6 +706,7 @@ object KartForm: TKartForm
           '29'
           '31'
         )
+        Style = csDropDownList
         TabOrder = 2
         OnChange = ComboBoxGeralChange
       end
@@ -715,6 +734,7 @@ object KartForm: TKartForm
           'M. Schumacher'
           'N. Piquet'
         )
+        Style = csDropDownList
         TabOrder = 3
         OnChange = ComboBoxGeralChange
       end
@@ -742,6 +762,7 @@ object KartForm: TKartForm
           'sedan'
           'SUV'
         )
+        Style = csDropDownList
         TabOrder = 4
         OnChange = ComboBoxGeralChange
       end
@@ -769,6 +790,7 @@ object KartForm: TKartForm
           'Renault'
           'Williams'
         )
+        Style = csDropDownList
         TabOrder = 5
         OnChange = ComboBoxGeralChange
       end
@@ -819,6 +841,7 @@ object KartForm: TKartForm
           'verde'
           'vermelho'
         )
+        Style = csDropDownList
         TabOrder = 0
         OnChange = ComboBoxGeralChange
       end
@@ -846,6 +869,7 @@ object KartForm: TKartForm
           'Fernando'
           'Rubens'
         )
+        Style = csDropDownList
         TabOrder = 1
         OnChange = ComboBoxGeralChange
       end
@@ -873,6 +897,7 @@ object KartForm: TKartForm
           '29'
           '31'
         )
+        Style = csDropDownList
         TabOrder = 2
         OnChange = ComboBoxGeralChange
       end
@@ -900,6 +925,7 @@ object KartForm: TKartForm
           'M. Schumacher'
           'N. Piquet'
         )
+        Style = csDropDownList
         TabOrder = 3
         OnChange = ComboBoxGeralChange
       end
@@ -927,6 +953,7 @@ object KartForm: TKartForm
           'sedan'
           'SUV'
         )
+        Style = csDropDownList
         TabOrder = 4
         OnChange = ComboBoxGeralChange
       end
@@ -954,6 +981,7 @@ object KartForm: TKartForm
           'Renault'
           'Williams'
         )
+        Style = csDropDownList
         TabOrder = 5
         OnChange = ComboBoxGeralChange
       end

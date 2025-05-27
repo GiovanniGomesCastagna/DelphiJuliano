@@ -19,7 +19,8 @@ type
     procedure BotaoLetraClick(Sender: TObject);
 
   private
-    BotoesDaPalavra: array of TButton;
+    procedure AtualizarTexto;
+    BotoesUsados: array of TButton;
     LetrasOriginais: array [0..8] of TButton;
     PosicoesOriginais: array [0..8] of TPoint;
     ProximaPosicao: integer;
@@ -43,6 +44,7 @@ var
   i: integer;
   btn: TButton;
 begin
+  SetLength(BotoesUsados, 0);
   ProximaPosicao := 0;
 
   for i := 0 to High(Letras) do
@@ -66,14 +68,20 @@ end;
 procedure TForm1.BotaoLetraClick(Sender: TObject);
 var
   Botao: TButton;
+  i, indice: integer;
+  ValorEncontrado: Boolean;
 begin
   Botao := TButton(Sender);
+  ValorEncontrado:= False;
 
   if (Botao.Parent = PANELbotoes) then
   begin
     PalavraInseridaEDT.Text := PalavraInseridaEDT.Text + Botao.Caption;
     Botao.Parent := PalavraInseridaEDT;
     Botao.Left := 10 + (ProximaPosicao * 60);
+
+    BotoesUsados[ProximaPosicao] := Botao;
+
     Inc(ProximaPosicao);
   end
   else if (Botao.Parent = PalavraInseridaEDT) then
@@ -81,10 +89,33 @@ begin
     PalavraInseridaEDT.Text := PalavraInseridaEDT.Text + Botao.Caption;
     Botao.Parent := PANELbotoes;
     Botao.Left := 10 + (Botao.Tag * 60);
+
+    for i := 0 to High(BotoesUsados) do
+    begin
+        if BotoesUsados[i] = Botao) then
+        begin
+          indice := i;
+          ValorEncontrado := True;
+          Break;
+        end;
+    end;
+
+    Dec(ProximaPosicao);
   end;
 
 
+end;
 
+procedure TForm1.AtualizarTexto(;
+var
+  Botao: TButton;
+  i: integer;
+begin
+
+  for i := 0 to 8 do
+  begin
+    if (
+  end;
 end;
 
 end.

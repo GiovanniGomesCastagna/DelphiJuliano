@@ -7,6 +7,7 @@ object Form1: TForm1
   ClientHeight = 654
   ClientWidth = 1361
   DesignTimePPI = 120
+  LCLVersion = '4.0.0.4'
   OnCreate = FormCreate
   object PANELjogo: TPanel
     Left = 0

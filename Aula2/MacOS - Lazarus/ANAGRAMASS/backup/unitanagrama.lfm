@@ -1,9 +1,41 @@
 object Form1: TForm1
   Left = 448
-  Height = 240
+  Height = 654
   Top = 32
-  Width = 320
+  Width = 1361
   Caption = 'Form1'
+  ClientHeight = 654
+  ClientWidth = 1361
   DesignTimePPI = 120
-  LCLVersion = '4.0.0.4'
+  OnCreate = FormCreate
+  object PANELjogo: TPanel
+    Left = 0
+    Height = 656
+    Top = 0
+    Width = 1361
+    ClientHeight = 656
+    ClientWidth = 1361
+    TabOrder = 0
+    object PalavraInseridaEDT: TEdit
+      Left = 1
+      Height = 127
+      Top = 1
+      Width = 1359
+      Align = alTop
+      AutoSize = False
+      TabOrder = 0
+    end
+    object PANELbotoes: TPanel
+      AnchorSideLeft.Control = PANELjogo
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = PalavraInseridaEDT
+      AnchorSideTop.Side = asrBottom
+      Left = 405
+      Height = 63
+      Top = 148
+      Width = 550
+      BorderSpacing.Top = 20
+      TabOrder = 1
+    end
+  end
 end

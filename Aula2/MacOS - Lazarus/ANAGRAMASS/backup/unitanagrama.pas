@@ -59,7 +59,7 @@ begin
       btn.Top := 7;
       btn.Tag := i;
       btn.OnClick := @BotaoLetraClick;
-
+      PANELbotoes.Width := PANELbotoes.Width + 60
       LetrasOriginais[i] := btn;
       PosicoesOriginais[i] := Point(btn.Left, btn.Top);
   end;

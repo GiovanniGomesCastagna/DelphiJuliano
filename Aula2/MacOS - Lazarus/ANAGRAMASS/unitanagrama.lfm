@@ -1,42 +1,44 @@
 object Form1: TForm1
   Left = 448
-  Height = 523
+  Height = 654
   Top = 32
-  Width = 1089
+  Width = 1361
   Caption = 'Form1'
-  ClientHeight = 523
-  ClientWidth = 1089
+  ClientHeight = 654
+  ClientWidth = 1361
+  DesignTimePPI = 120
   OnCreate = FormCreate
   object PANELjogo: TPanel
     Left = 0
-    Height = 525
+    Height = 656
     Top = 0
-    Width = 1089
-    ClientHeight = 525
-    ClientWidth = 1089
+    Width = 1361
+    ClientHeight = 656
+    ClientWidth = 1361
     TabOrder = 0
     object PANELbotoes: TPanel
       AnchorSideLeft.Control = PANELjogo
       AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = PalavraInserida
       AnchorSideTop.Side = asrBottom
-      Left = 324
-      Height = 50
-      Top = 120
-      Width = 440
-      BorderSpacing.Top = 16
+      Left = 405
+      Height = 62
+      Top = 81
+      Width = 550
+      BorderSpacing.Top = 20
       TabOrder = 0
     end
     object PalavraInserida: TPanel
       AnchorSideLeft.Control = PANELjogo
+      AnchorSideLeft.Side = asrCenter
       AnchorSideTop.Control = PANELjogo
       AnchorSideRight.Control = PANELjogo
-      AnchorSideRight.Side = asrBottom
-      Left = 1
-      Height = 103
+      AnchorSideRight.Side = asrCenter
+      Left = 675
+      Height = 60
       Top = 1
-      Width = 1087
-      Anchors = [akTop, akLeft, akRight]
+      Width = 10
+      Anchors = [akTop, akRight]
       BevelOuter = bvNone
       Color = clMenu
       ParentBackground = False

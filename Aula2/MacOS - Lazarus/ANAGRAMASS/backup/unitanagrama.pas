@@ -22,8 +22,10 @@ type
     BotoesUsados: array of TButton;
     LetrasOriginais: array [0..8] of TButton;
     PosicoesOriginais: array [0..8] of TPoint;
+    PalavraFormada: string;
     ProximaPosicao: integer;
     procedure AtualizarTexto;
+    procedure RealocarBotoes;
   public
 
   end;
@@ -75,8 +77,9 @@ begin
 
   if (Botao.Parent = PANELbotoes) then
   begin
+    PalavraInserida.Width := PalavraInserida.Width + 60;
     Botao.Parent := PalavraInserida;
-    Botao.Left := 500 + (ProximaPosicao * 60);
+    Botao.Left := 10 + (ProximaPosicao * 60);
 
     SetLength(BotoesUsados, Length(BotoesUsados) + 1);
     BotoesUsados[ProximaPosicao] := Botao;
@@ -85,6 +88,7 @@ begin
   end
   else if (Botao.Parent = PalavraInserida) then
   begin
+    PalavraInserida.Width := PalavraInserida.Width - 60;
     Botao.Parent := PANELbotoes;
     Botao.Left := 10 + (Botao.Tag * 60);
 
@@ -97,11 +101,19 @@ begin
           Break;
         end;
     end;
-    for i := indice to High(BotoesUsados) do
+    if ValorEncontrado then
     begin
-        BotoesUsados[i] := BotoesUsados[i + 1];
+      for i := indice to High(BotoesUsados) - 1 do
+      begin
+          BotoesUsados[i] := BotoesUsados[i + 1];
+      end;
+      SetLength(BotoesUsados, Length(BotoesUsados) - 1);
+      Dec(ProximaPosicao);
+
+      AtualizarTexto;
+      RealocarBotoes;
     end;
-    Dec(ProximaPosicao);
+
   end;
 
 
@@ -110,14 +122,24 @@ end;
 procedure TForm1.AtualizarTexto;
 var
   i: integer;
-  palavraFormada: string;
+
 begin
-  palavraFormada := '';
+  PalavraFormada := '';
 
   for i := 0 to High(BotoesUsados) do
   begin
-    palavraFormada := palavraFormada + BotoesUsados[i].Caption;
+    PalavraFormada := palavraFormada + BotoesUsados[i].Caption;
 
+  end;
+end;
+
+procedure TForm1.RealocarBotoes;
+var
+  i: integer;
+begin
+  for i:= 0 to High(BotoesUsados) do
+  begin
+    BotoesUsados[i].Left := 10 + (i * 60);
   end;
 end;
 

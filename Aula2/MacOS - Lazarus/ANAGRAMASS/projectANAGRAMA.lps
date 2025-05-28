@@ -12,7 +12,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="35"/>
       </Unit>
       <Unit>
         <Filename Value="unitanagrama.pas"/>
@@ -22,14 +22,29 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unitANAGRAMA"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="26"/>
-        <CursorPos X="25" Y="46"/>
-        <UsageCount Value="34"/>
+        <TopLine Value="97"/>
+        <CursorPos X="50" Y="104"/>
+        <UsageCount Value="35"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\wincontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="5283"/>
+        <CursorPos Y="5293"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="574"/>
+        <CursorPos Y="585"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="17">
+    <JumpHistory HistoryIndex="27">
       <Position>
         <Filename Value="unitanagrama.pas"/>
       </Position>
@@ -100,6 +115,46 @@
       <Position>
         <Filename Value="unitanagrama.pas"/>
         <Caret Line="79" Column="25" TopLine="54"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="119" Column="64" TopLine="103"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="23" Column="5" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="120" Column="36" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="118" Column="48" TopLine="104"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="22" Column="5" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="114" Column="23" TopLine="103"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="82" Column="45" TopLine="73"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="46" Column="28" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="119" Column="5" TopLine="103"/>
+      </Position>
+      <Position>
+        <Filename Value="unitanagrama.pas"/>
+        <Caret Line="118" Column="5" TopLine="102"/>
       </Position>
     </JumpHistory>
     <RunParams>

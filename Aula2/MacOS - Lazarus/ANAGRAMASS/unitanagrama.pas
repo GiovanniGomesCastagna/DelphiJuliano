@@ -12,19 +12,18 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    PalavraInseridaEDT: TEdit;
+    PalavraInserida: TPanel;
     PANELbotoes: TPanel;
     PANELjogo: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure BotaoLetraClick(Sender: TObject);
 
   private
-    procedure AtualizarTexto;
     BotoesUsados: array of TButton;
     LetrasOriginais: array [0..8] of TButton;
     PosicoesOriginais: array [0..8] of TPoint;
     ProximaPosicao: integer;
-
+    procedure AtualizarTexto;
   public
 
   end;
@@ -76,45 +75,52 @@ begin
 
   if (Botao.Parent = PANELbotoes) then
   begin
-    PalavraInseridaEDT.Text := PalavraInseridaEDT.Text + Botao.Caption;
-    Botao.Parent := PalavraInseridaEDT;
-    Botao.Left := 10 + (ProximaPosicao * 60);
+    Botao.Parent := PalavraInserida;
+    Botao.Left := 500 + (ProximaPosicao * 60);
 
+    SetLength(BotoesUsados, Length(BotoesUsados) + 1);
     BotoesUsados[ProximaPosicao] := Botao;
 
     Inc(ProximaPosicao);
   end
-  else if (Botao.Parent = PalavraInseridaEDT) then
+  else if (Botao.Parent = PalavraInserida) then
   begin
-    PalavraInseridaEDT.Text := PalavraInseridaEDT.Text + Botao.Caption;
     Botao.Parent := PANELbotoes;
     Botao.Left := 10 + (Botao.Tag * 60);
 
     for i := 0 to High(BotoesUsados) do
     begin
-        if BotoesUsados[i] = Botao) then
+        if (BotoesUsados[i] = Botao) then
         begin
           indice := i;
           ValorEncontrado := True;
           Break;
         end;
     end;
-
+    if ValorEncontrado then
+    begin
+      for i := indice to High(BotoesUsados) - 1 do
+      begin
+          BotoesUsados[i] := BotoesUsados[i + 1];
+      end;
+    end;
     Dec(ProximaPosicao);
   end;
 
 
 end;
 
-procedure TForm1.AtualizarTexto(;
+procedure TForm1.AtualizarTexto;
 var
-  Botao: TButton;
   i: integer;
+  palavraFormada: string;
 begin
+  palavraFormada := '';
 
-  for i := 0 to 8 do
+  for i := 0 to High(BotoesUsados) do
   begin
-    if (
+    palavraFormada := palavraFormada + BotoesUsados[i].Caption;
+
   end;
 end;
 

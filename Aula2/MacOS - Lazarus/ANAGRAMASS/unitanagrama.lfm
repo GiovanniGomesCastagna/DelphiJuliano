@@ -1,41 +1,46 @@
 object Form1: TForm1
   Left = 448
-  Height = 654
+  Height = 523
   Top = 32
-  Width = 1361
+  Width = 1089
   Caption = 'Form1'
-  ClientHeight = 654
-  ClientWidth = 1361
-  DesignTimePPI = 120
-  LCLVersion = '4.0.0.4'
+  ClientHeight = 523
+  ClientWidth = 1089
   OnCreate = FormCreate
   object PANELjogo: TPanel
     Left = 0
-    Height = 656
+    Height = 525
     Top = 0
-    Width = 1361
-    ClientHeight = 656
-    ClientWidth = 1361
+    Width = 1089
+    ClientHeight = 525
+    ClientWidth = 1089
     TabOrder = 0
-    object PalavraInseridaEDT: TEdit
-      Left = 1
-      Height = 127
-      Top = 1
-      Width = 1359
-      Align = alTop
-      AutoSize = False
-      TabOrder = 0
-    end
     object PANELbotoes: TPanel
       AnchorSideLeft.Control = PANELjogo
       AnchorSideLeft.Side = asrCenter
-      AnchorSideTop.Control = PalavraInseridaEDT
+      AnchorSideTop.Control = PalavraInserida
       AnchorSideTop.Side = asrBottom
-      Left = 405
-      Height = 63
-      Top = 148
-      Width = 550
-      BorderSpacing.Top = 20
+      Left = 324
+      Height = 50
+      Top = 120
+      Width = 440
+      BorderSpacing.Top = 16
+      TabOrder = 0
+    end
+    object PalavraInserida: TPanel
+      AnchorSideLeft.Control = PANELjogo
+      AnchorSideTop.Control = PANELjogo
+      AnchorSideRight.Control = PANELjogo
+      AnchorSideRight.Side = asrBottom
+      Left = 1
+      Height = 103
+      Top = 1
+      Width = 1087
+      Anchors = [akTop, akLeft, akRight]
+      BevelOuter = bvNone
+      Color = clMenu
+      ParentBackground = False
+      ParentColor = False
       TabOrder = 1
     end
   end

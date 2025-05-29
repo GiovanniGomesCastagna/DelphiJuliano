@@ -12,14 +12,15 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    DELETEbutton: TButton;
     PalavraInserida: TPanel;
+    PANELpalavras: TPanel;
     PANELbotoes: TPanel;
     PANELjogo: TPanel;
     procedure FormCreate(Sender: TObject);
     procedure BotaoLetraClick(Sender: TObject);
 
   private
-    Palavras: TStringList;
     BotoesUsados: array of TButton;
     LetrasOriginais: array [0..8] of TButton;
     PosicoesOriginais: array [0..8] of TPoint;
@@ -30,6 +31,9 @@ type
     procedure RealocarBotoes;
     procedure AtribuirLista;
     procedure CriarPanelsPalavras;
+    procedure VerificarPalavras;
+    procedure DeletarLetras;
+
   public
 
   end;
@@ -40,6 +44,7 @@ var
 
 implementation
 
+// ------------------------VV Funções e Procedures VV --------------------------
 {$R *.lfm}
 
 { TForm1 }
@@ -92,6 +97,9 @@ begin
     BotoesUsados[ProximaPosicao] := Botao;
 
     Inc(ProximaPosicao);
+
+    AtualizarTexto;
+    VerificarPalavras;
   end
   else if (Botao.Parent = PalavraInserida) then
   begin
@@ -118,6 +126,7 @@ begin
       Dec(ProximaPosicao);
 
       AtualizarTexto;
+      VerificarPalavras;
       RealocarBotoes;
     end;
 
@@ -181,11 +190,13 @@ begin
     if (i = FPalavras.Count - 1) or ((i + 1) mod PALAVRAS_POR_PANEL = 0) then
     begin
       Panel := TPanel.Create(Self);
-      Panel.Parent := PANELjogo;
-      Panel.Left := 0;
+      Panel.Parent := PANELpalavras;
+      Panel.Align := alLeft;
       Panel.Top := 200;
       Panel.Height := 300;
       Panel.Width := 280;
+      Panel.BevelOuter := bvNone;
+      Panel.BevelInner := bvNone;
     end;
 
     Palavra := TLabel.Create(Self);
@@ -193,10 +204,53 @@ begin
     Palavra.Align := alTop;
     Palavra.Top := 20;
     Palavra.Alignment := taCenter;
-    Palavra.Font.Size := 8;
+    Palavra.Font.Size := 10;
     Palavra.Caption := FPalavras[i];
     Palavra.Name := 'LABELpalavra' + IntToStr(i);
   end;
+end;
+
+procedure TForm1.VerificarPalavras;
+var
+  i: integer;
+  palavraCerta: TLabel;
+  indice: integer;
+  lblEncontrada: Boolean;
+begin
+  indice := -1;
+  lblEncontrada:= False;
+
+  for i := 0 to FPalavras.Count - 1 do
+  begin
+
+    palavraCerta:= TLabel(FindComponent('LABELpalavra' + IntToStr(i)));
+
+    if (PalavraFormada = FPalavras[i]) then
+    begin
+      ShowMessage(palavraCerta.Caption);
+      palavraCerta.Font.Color := clGreen;
+      palavraCerta.Font.Style := [fsBold, fsUnderline];
+      lblEncontrada := true;
+      indice := i;
+      DeletarLetras;
+      Exit;
+    end;
+  end;
+
+  if lblEncontrada then
+  begin
+    for i:= indice to FPalavras.Count -1 do
+    begin
+      FPalavras[i] := FPalavras[i + 1];
+    end;
+    FPalavras.Delete(FPalavras.Count - 1);
+  end;
+end;
+
+procedure TForm1.DeletarLetras;
+begin
+
+
 end;
 
 end.

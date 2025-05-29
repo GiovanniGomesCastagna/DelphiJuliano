@@ -5,25 +5,29 @@ unit unitANAGRAMA;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls, Generics.Collections;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    RANDOMIZEbotao: TButton;
     DELETEbutton: TButton;
     PalavraInserida: TPanel;
     PANELpalavras: TPanel;
     PANELbotoes: TPanel;
     PANELjogo: TPanel;
+    procedure DELETEbuttonClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure BotaoLetraClick(Sender: TObject);
+    procedure RANDOMIZEbotaoClick(Sender: TObject);
 
   private
     BotoesUsados: array of TButton;
     LetrasOriginais: array [0..8] of TButton;
     PosicoesOriginais: array [0..8] of TPoint;
+    ListaLabel: array of TLabel;
     PalavraFormada: string;
     FPalavras: TStringList;
     ProximaPosicao: integer;
@@ -33,14 +37,18 @@ type
     procedure CriarPanelsPalavras;
     procedure VerificarPalavras;
     procedure DeletarLetras;
+    procedure RandomizarLetras;
 
   public
 
   end;
 const
-  Letras: array[0..8] of Char = ('C', 'C', 'G', 'I', 'I', 'O', 'R', 'R', 'U');
+  QUANTIDADE_ELEMENTOS = 9;
+  LetrasOrdenadas: array[0..8] of Char = ('C', 'C', 'G', 'I', 'I', 'O', 'R', 'R', 'U');
 var
   Form1: TForm1;
+  Letras: array of string;
+
 
 implementation
 
@@ -76,6 +84,11 @@ begin
 
   AtribuirLista;
 
+end;
+
+procedure TForm1.DELETEbuttonClick(Sender: TObject);
+begin
+  DeletarLetras;
 end;
 
 procedure TForm1.BotaoLetraClick(Sender: TObject);
@@ -135,6 +148,11 @@ begin
 
 end;
 
+procedure TForm1.RANDOMIZEbotaoClick(Sender: TObject);
+begin
+  RandomizarLetras;
+end;
+
 procedure TForm1.AtualizarTexto;
 var
   i: integer;
@@ -185,6 +203,8 @@ var
   Palavra: TLabel;
   i: integer;
 begin
+  SetLength(ListaLabel, FPalavras.Count);
+
   for i := FPalavras.Count - 1 downto 0 do
   begin
     if (i = FPalavras.Count - 1) or ((i + 1) mod PALAVRAS_POR_PANEL = 0) then
@@ -199,58 +219,84 @@ begin
       Panel.BevelInner := bvNone;
     end;
 
-    Palavra := TLabel.Create(Self);
-    Palavra.Parent := Panel;
-    Palavra.Align := alTop;
-    Palavra.Top := 20;
-    Palavra.Alignment := taCenter;
-    Palavra.Font.Size := 10;
-    Palavra.Caption := FPalavras[i];
-    Palavra.Name := 'LABELpalavra' + IntToStr(i);
+    ListaLabel[i] := TLabel.Create(Self);
+    ListaLabel[i].Parent := Panel;
+    ListaLabel[i].Align := alTop;
+    ListaLabel[i].Top := 20;
+    ListaLabel[i].Alignment := taCenter;
+    ListaLabel[i].Font.Size := 10;
+    ListaLabel[i].Caption := StringOfChar('*', Length(FPalavras[i]));
   end;
 end;
 
 procedure TForm1.VerificarPalavras;
 var
   i: integer;
-  palavraCerta: TLabel;
-  indice: integer;
-  lblEncontrada: Boolean;
 begin
-  indice := -1;
-  lblEncontrada:= False;
-
   for i := 0 to FPalavras.Count - 1 do
   begin
-
-    palavraCerta:= TLabel(FindComponent('LABELpalavra' + IntToStr(i)));
-
     if (PalavraFormada = FPalavras[i]) then
     begin
-      ShowMessage(palavraCerta.Caption);
-      palavraCerta.Font.Color := clGreen;
-      palavraCerta.Font.Style := [fsBold, fsUnderline];
-      lblEncontrada := true;
-      indice := i;
+      ListaLabel[i].Caption := FPalavras[i];
+
+      ListaLabel[i].Font.Color := clGreen;
+      ListaLabel[i].Font.Style := [fsBold, fsUnderline];
+
+      FPalavras.Delete(i);
       DeletarLetras;
       Exit;
     end;
   end;
-
-  if lblEncontrada then
-  begin
-    for i:= indice to FPalavras.Count -1 do
-    begin
-      FPalavras[i] := FPalavras[i + 1];
-    end;
-    FPalavras.Delete(FPalavras.Count - 1);
-  end;
 end;
 
 procedure TForm1.DeletarLetras;
+var
+  i: integer;
+  Botao: TButton;
 begin
+  for i := 0 to High(BotoesUsados) do
+  begin
+    Botao := BotoesUsados[i];
+    Botao.Parent := PANELbotoes;
+    Botao.Left := 10 + (Botao.Tag * 60);
+  end;
 
+  PalavraFormada:= '';
+  SetLength(BotoesUsados, 0);
+  ProximaPosicao := 0;
+  PalavraInserida.Width := 10;
+end;
 
+procedure TForm1.RandomizarLetras;
+var
+  iIndex: array of integer;
+  i, j, k: integer;
+begin
+  Randomize;
+
+  SetLength(Letras, QUANTIDADE_ELEMENTOS);
+
+  SetLength(iIndex, QUANTIDADE_ELEMENTOS);
+  for i := 0 to Pred(QUANTIDADE_ELEMENTOS) do
+    iIndex[i] := i;
+
+  for i := 0 to High(Letras) do
+  begin
+    j := Random(Length(iIndex));
+    Letras[i] := LetrasOrdenadas[iIndex[j]];
+
+    for k := j to High(iIndex) - 1 do
+      iIndex[k] := iIndex[k + 1];
+
+    SetLength(iIndex, Length(iIndex) - 1);
+  end;
+
+  for i := 0 to High(LetrasOriginais) do
+  begin
+    LetrasOriginais[i].Caption := Letras[i];
+  end;
+
+  DeletarLetras;
 end;
 
 end.

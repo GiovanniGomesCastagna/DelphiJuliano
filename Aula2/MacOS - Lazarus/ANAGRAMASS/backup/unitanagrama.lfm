@@ -30,7 +30,7 @@ object Form1: TForm1
       AnchorSideTop.Control = PalavraInserida
       AnchorSideTop.Side = asrBottom
       Left = 675
-      Height = 70
+      Height = 64
       Top = 91
       Width = 10
       BorderSpacing.Top = 20
@@ -64,7 +64,7 @@ object Form1: TForm1
       AnchorSideTop.Side = asrBottom
       Left = 400
       Height = 367
-      Top = 241
+      Top = 235
       Width = 560
       BorderSpacing.Top = 80
       BevelOuter = bvNone
@@ -90,6 +90,21 @@ object Form1: TForm1
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
+      OnClick = DELETEbuttonClick
+    end
+    object RANDOMIZEbotao: TButton
+      AnchorSideLeft.Control = PANELjogo
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = PANELbotoes
+      AnchorSideTop.Side = asrBottom
+      Left = 633
+      Height = 40
+      Top = 175
+      Width = 94
+      BorderSpacing.Top = 20
+      Caption = 'Embaralhar'
+      TabOrder = 4
+      OnClick = RANDOMIZEbotaoClick
     end
   end
 end

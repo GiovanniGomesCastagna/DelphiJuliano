@@ -19,13 +19,17 @@ type
     procedure BotaoLetraClick(Sender: TObject);
 
   private
+    Palavras: TStringList;
     BotoesUsados: array of TButton;
     LetrasOriginais: array [0..8] of TButton;
     PosicoesOriginais: array [0..8] of TPoint;
     PalavraFormada: string;
+    FPalavras: TStringList;
     ProximaPosicao: integer;
     procedure AtualizarTexto;
     procedure RealocarBotoes;
+    procedure AtribuirLista;
+    procedure CriarPanelsPalavras;
   public
 
   end;
@@ -44,6 +48,7 @@ procedure TForm1.FormCreate(Sender: TObject);
 var
   i: integer;
   btn: TButton;
+
 begin
   SetLength(BotoesUsados, 0);
   ProximaPosicao := 0;
@@ -59,10 +64,12 @@ begin
       btn.Top := 7;
       btn.Tag := i;
       btn.OnClick := @BotaoLetraClick;
-      PANELbotoes.Width := PANELbotoes.Width + 60
+      PANELbotoes.Width := PANELbotoes.Width + 60;
       LetrasOriginais[i] := btn;
       PosicoesOriginais[i] := Point(btn.Left, btn.Top);
   end;
+
+  AtribuirLista;
 
 end;
 
@@ -140,6 +147,54 @@ begin
   for i:= 0 to High(BotoesUsados) do
   begin
     BotoesUsados[i].Left := 10 + (i * 60);
+  end;
+end;
+
+procedure TForm1.AtribuirLista;
+var
+  ListaPalavras: TStringList;
+begin
+  ListaPalavras:= TStringList.Create;
+  try
+    ListaPalavras.LoadFromFile('lista.txt', TEncoding.UTF8);
+
+    FPalavras := TStringList.Create;
+    FPalavras.Assign(ListaPalavras);
+
+    CriarPanelsPalavras;
+  finally
+    ListaPalavras.Free;
+  end;
+
+end;
+
+procedure TForm1.CriarPanelsPalavras;
+const
+  PALAVRAS_POR_PANEL = 15;
+var
+  Panel: TPanel;
+  Palavra: TLabel;
+  i: integer;
+begin
+  for i := FPalavras.Count - 1 downto 0 do
+  begin
+    if (i = FPalavras.Count - 1) or ((i + 1) mod PALAVRAS_POR_PANEL = 0) then
+    begin
+      Panel := TPanel.Create(Self);
+      Panel.Parent := PANELjogo;
+      Panel.Left := 0;
+      Panel.Top := 200;
+      Panel.Height := 300;
+      Panel.Width := 280;
+    end;
+
+    Palavra := TLabel.Create(Self);
+    Palavra.Parent := Panel;
+    Palavra.Align := alTop;
+    Palavra.Alignment := taCenter;
+    Palavra.Font.Size := 8;
+    Palavra.Caption := FPalavras[i];
+    Palavra.Name := 'LABELpalavra' + IntToStr(i);
   end;
 end;
 
